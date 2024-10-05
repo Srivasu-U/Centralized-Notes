@@ -30,3 +30,16 @@ dataType := variableName.(type)
 - Arrays in go have two values attached with them: `length` and `capacity`
   - For example `make([]int, 0, 10)` returns an array (also called a `slice` in Golang), of size 0 but it's underlying *capacity* is 10, i.e, it can hold 10 values, but it is currently empty.
     - Thus, the length of a slice is *always* less than or equal to its capacity. This helps with memory conservation.
+- Been noticing a lot of methods that return only an `error` as a return value. If that method evaluates correctly, then the return value is `nil`, aka, in the check after the function call, a normal `if err != nil {//Handle the error}` can be used
+  - If an actual error is to be thrown then the `fmt.Errorf()` method can be used which creates a formatted string to be thrown as an error
+  ```
+  err := funcToBeCalled()
+  if err != nil {
+    // Handle the error, aka, failure case, end exec here
+  }
+  
+  func funcToBeCalled() error {
+    return fmt.Errorf() // in case of error
+    return nil // No error, successful exec
+  }
+  ```
