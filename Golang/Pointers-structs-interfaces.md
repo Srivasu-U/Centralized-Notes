@@ -18,3 +18,10 @@ type Y interface {
 ```
 - Interfaces can somehow be struct elements?, ie, structs implement interfaces. I am not sure how
 - Interfaces can be parameters to functions
+
+
+### Practices
+- When do you use structs? These don't behave like normal objects from other OOP based languages
+    - When to use a pointer to a struct? It doesn't seem to be consistent with just size. 
+    - Pointers are used, from what I have seen, when there can be or needs to be a shared value state of a certain struct variable. Current location while parsing is a good example
+    
