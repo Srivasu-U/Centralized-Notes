@@ -43,3 +43,8 @@ dataType := variableName.(type)
     return nil // No error, successful exec
   }
   ```
+- List of useful terminal commands for Golang
+  - `go mod init <name>` to create mod file. `name` is generally started with `github.com` as a convention but not enforced
+  - `go run main.go` while being in the directory that the `main.go` is present in.
+  - `go test ./<test-folder>` to run the test file within the specified folder
+  - `go build -o <folder-name> . && ./<folder-name>` to build the executable file
