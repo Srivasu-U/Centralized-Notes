@@ -43,6 +43,23 @@ dataType := variableName.(type)
     return nil // No error, successful exec
   }
   ```
+
+### Slices
+- Slices in Golang have `length` and `capacity`
+  - Syntax: `arr := [<len>]<type>{<value-list>}`. Ex: ` s := [5]int{}` -> Creates a slice of arrays with capacity 5 but length 0
+    - Can also use `make()`. Ex: `s := make([]int, 0, 5)` -> Same as above
+  - Length is the number of elements actually in an array
+  - Capacity is the underlying capacity, ie, how much it *can* hold
+  - Retrieved using `len(arr)` and `cap(arr)`
+  - Slices of slices are possible like `[][]int`. Essentially a 2D matrix
+  - `append()` is used as follows: `s = append(s, newElem)` -> Returns a new slice with the newElem appended
+
+### Maps
+- Key-value pairs as usual
+- Syntax: `mapA := map[int]string` -> Creates a map with int keys and string values
+  - Can also be `mapA := make(map[int]string)`
+
+### Terminal commands  
 - List of useful terminal commands for Golang
   - `go mod init <name>` to create mod file. `name` is generally started with `github.com` as a convention but not enforced
   - `go run main.go` while being in the directory that the `main.go` is present in.
