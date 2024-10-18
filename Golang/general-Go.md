@@ -63,5 +63,6 @@ dataType := variableName.(type)
 - List of useful terminal commands for Golang
   - `go mod init <name>` to create mod file. `name` is generally started with `github.com` as a convention but not enforced
   - `go run main.go` while being in the directory that the `main.go` is present in.
-  - `go test ./<test-folder>` to run the test file within the specified folder
-  - `go build -o <folder-name> . && ./<folder-name>` to build the executable file
+  - `go test ./<dir-name>` to run the test file within the specified folder
+    - `go test -run <test-name> ./<dir-name>` to run a specific test
+  - `go build -o <dir-name> . && ./<dir-name>` to build the executable file
