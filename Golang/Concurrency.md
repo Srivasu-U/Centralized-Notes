@@ -1,7 +1,13 @@
 ## Go concurrency
 - Concurrent execution is the main draw of Golang
 - We have stuff like `goroutines`, with are threads managed by the runtime
+    - ***Notes***: `goroutines` are NOT OS threads or even virtual threads
+        - This is because threads have a fixed-size stack and require some sort of kernel control, which has an overhead
+        - `goroutines` have a small stack which are dynamic and change size. 
+        - `goroutines` are scheduled using the Go runtime, which uses a `M:N threading model`
+            - This means M goroutines are mutiplexed on to N OS-threads
     - `goroutines` are extremely lightweight
+- `goroutines`, `channels` and `mutexes` are the cornerstones of Go concurrency
 - Goroutines are started as such:
 ```
 go funcName() 
