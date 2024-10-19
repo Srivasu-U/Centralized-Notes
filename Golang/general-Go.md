@@ -66,3 +66,15 @@ dataType := variableName.(type)
   - `go test ./<dir-name>` to run the test file within the specified folder
     - `go test -run <test-name> ./<dir-name>` to run a specific test
   - `go build -o <dir-name> . && ./<dir-name>` to build the executable file
+
+### JSON and webapp stuff
+- This is called `JSON Marshalling`
+```
+type RegisterUserPayload struct {
+	FirstName string `json:"firstName"`
+	LastName  string `json:"lastName"`
+	Email     string `json:"email"`
+	Password  string `json:"password"`
+}
+```
+- Basically converting a struct and it's values into equivalent json values. The reverse is called `unmarshalling`
