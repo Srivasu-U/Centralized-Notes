@@ -17,7 +17,14 @@ This must be done in a file called `something_test.go` where the method under te
 
 
 - Type convertion works like this: `datatype(value)`. Example: `float64(2)` converts int 2 into float64
-- We also have type checking/assertion like this: `ident.(type)`. Example: `value.(string)` checks if value contains a string expression
+  - As usual, there are exceptions. A `string` value cannot be converted into `int` like this. We need to use
+  ```
+  strconv.ParseInt(<string-value>)   // to convert string to int
+  strconv.Itoa(<intvalue>) // to convert int to string
+  ```
+  - Why?! Who knows
+- We also have type checking/assertion like this: `ident.(type)`. This actually returns the datatype of `ident` which means is can be used as a value for switch case 
+  - Example: `value.(string)` checks if value contains a string expression
 - This is how to get the datatype of an identifier/variable
 ```
 dataType := variableName.(type)
