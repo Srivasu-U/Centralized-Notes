@@ -32,6 +32,8 @@ func name(args ...<datatype>) {...}
     - This is important because we need an error check, ie, `if err != nil { //handle err}` in most cases for most methods
     - This is how errors get propagated which I find to be more intuitive than `try..catch..finally` blocks
     - Still need to figure out best practices around error handling and how much you can propagate errors
+- Golang convention: Error messages must not be capitalized, i.e, `invalid operation` over `Invalid operation`
+  - This throws a warning on the linter/compiler, though not an error. At least on `staticcheck`
 
 
 ### Anonymous functions
