@@ -1,0 +1,11 @@
+## Making a lookup list of vim commands
+- **g commands**
+  - `gq` format a line into a readable format, more like wrapping
+    - `gq5j` format the 5 lines down, ie, wrap it
+  - `g$` or `g0` jump to end or beginning of visual line instead of absolute
+    - The absolute commands are just `$` and `0`
+  - `gu` uncapitalize and `gU` is capitalize
+    - `gU3w` capitalize 3 words
+  - `f<x>` would be find the next instance of `<x>`
+  - `gf` go to a file
+  - `gv` go to last selection in visual mode
