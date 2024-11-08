@@ -9,3 +9,5 @@
   - `f<x>` would be find the next instance of `<x>`
   - `gf` go to a file
   - `gv` go to last selection in visual mode
+- `qa` to begin recording macros
+  - `@a` to run the macro `a`
