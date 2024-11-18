@@ -11,3 +11,5 @@
   - `gv` go to last selection in visual mode
 - `qa` to begin recording macros
   - `@a` to run the macro `a`
+- `gd` is go to definition
+  - `Ctrl + o` jump back in the jump list
